@@ -3,6 +3,11 @@ import axios from 'axios';
 const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 
+// Update the API URLs to use HTTPS
+const GEOCODING_URL = 'https://api.openweathermap.org/geo/1.0/direct';
+const WEATHER_URL = 'https://api.openweathermap.org/data/2.5/weather';
+const FORECAST_URL = 'https://api.openweathermap.org/data/2.5/forecast';
+
 export const getWeatherData = async (query, unit = 'metric', lang = 'en') => {
   try {
     let url;
