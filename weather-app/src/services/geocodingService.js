@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const API_KEY = 'a0dafb3a5a0172b5281ccc344364083e';
-const GEO_BASE_URL = 'http://api.openweathermap.org/geo/1.0';
+const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
+const GEO_BASE_URL = 'https://api.openweathermap.org/geo/1.0';
 
 export const searchLocations = async (searchText, language = 'en') => {
   try {
